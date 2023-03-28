@@ -1,5 +1,6 @@
 {
   "name": "vr-tennis",
+  "homepage": "https://hexacters.github.io/vr-shuttlecock/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
