@@ -15,17 +15,15 @@ export default function Model(props) {
   let repeadt = false;
   let currentValue = 0;
   useFrame((state, delta) => {
-    const max = 300;
+    const max = 200;
     const min = -35;
     const t = state.clock.getElapsedTime()
-    // console.log(-0.2 - (1 + Math.sin(t / 1.5)) / 20)
-    // cock.current.rotation.z = -0.2 - (1 + Math.sin(t / 1.5)) / 20
-    // cock.current.rotation.x = Math.cos(t / 4) / 8
-    // cock.current.rotation.y = Math.sin(t / 4) / 8
+    cock.current.rotation.z = -0.2 - (1 + Math.sin(t / 1.5)) / 20
+    cock.current.rotation.x = Math.cos(t / 4) * 100
+    cock.current.rotation.y = Math.sin(t / 4) * 50
     currentValue = repeadt ? currentValue + (t * max) : -t * max;
-    console.log(currentValue)
     cock.current.position.x = currentValue;
-    cock.current.position.y = repeadt ? Math.sin(t) * 100 : Math.cos(t) * 100 ;
+    cock.current.position.y = repeadt ? Math.sin(t) * 50 : Math.cos(t) * 100 ;
     cock.current.position.z = t * 6;
     if (currentValue < -max) {
       state.clock.stop();
@@ -74,12 +72,12 @@ export default function Model(props) {
           </group>
         </group>
         <group name="Root">
-          <group ref={cock} name="Gp_Shuttle" position={[0, -35, 0]} ro>
+          <group ref={cock} name="Gp_Shuttle" position={[177.76, 42.58, -3.55]} >
             <group name="Obj_Cork">
-              <mesh name="Obj_Cork_0" geometry={nodes.Obj_Cork_0.geometry} material={materials.White} position={[177.76, 42.58, -3.55]} rotation={[-1.19, -0.61, -2.04]} scale={176.2} />
+              <mesh name="Obj_Cork_0" geometry={nodes.Obj_Cork_0.geometry} material={materials.White} rotation={[-1.19, -0.61, -2.04]} scale={176.2} />
             </group>
             <group name="Obj_Feather">
-              <mesh name="Obj_Feather_0" geometry={nodes.Obj_Feather_0.geometry} material={materials.White} position={[177.76, 42.58, -3.55]} rotation={[-1.19, -0.61, -2.04]} scale={176.2} />
+              <mesh name="Obj_Feather_0" geometry={nodes.Obj_Feather_0.geometry} material={materials.White} rotation={[-1.19, -0.61, -2.04]} scale={176.2} />
             </group>
           </group>
         </group>
