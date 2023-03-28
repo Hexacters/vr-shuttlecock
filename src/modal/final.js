@@ -10,7 +10,7 @@ import { useFrame } from '@react-three/fiber';
 export default function Model(props) {
   const group = useRef()
   const cock = useRef()
-  const { nodes, materials, animations } = useGLTF('/tennis.glb')
+  const { nodes, materials, animations } = useGLTF('./tennis.glb')
   const { actions,names } = useAnimations(animations, group);
   let repeadt = false;
   let currentValue = 0;
@@ -25,7 +25,7 @@ export default function Model(props) {
     currentValue = repeadt ? currentValue + (t * max) : -t * max;
     console.log(currentValue)
     cock.current.position.x = currentValue;
-    cock.current.position.y = Math.sin(t * 1.5);
+    cock.current.position.y = repeadt ? Math.sin(t) * 100 : Math.cos(t) * 100 ;
     cock.current.position.z = t * 6;
     if (currentValue < -max) {
       state.clock.stop();
@@ -88,4 +88,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/tennis.glb')
+useGLTF.preload('./tennis.glb')
