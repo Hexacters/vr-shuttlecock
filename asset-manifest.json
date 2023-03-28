@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.5a3ad750.css",
-    "main.js": "/static/js/main.44941f75.js",
-    "static/js/787.716fcb95.chunk.js": "/static/js/787.716fcb95.chunk.js",
-    "index.html": "/index.html",
-    "main.5a3ad750.css.map": "/static/css/main.5a3ad750.css.map",
-    "main.44941f75.js.map": "/static/js/main.44941f75.js.map",
-    "787.716fcb95.chunk.js.map": "/static/js/787.716fcb95.chunk.js.map"
+    "main.css": "/vr-shuttlecock/static/css/main.5a3ad750.css",
+    "main.js": "/vr-shuttlecock/static/js/main.2b622068.js",
+    "static/js/787.716fcb95.chunk.js": "/vr-shuttlecock/static/js/787.716fcb95.chunk.js",
+    "index.html": "/vr-shuttlecock/index.html",
+    "main.5a3ad750.css.map": "/vr-shuttlecock/static/css/main.5a3ad750.css.map",
+    "main.2b622068.js.map": "/vr-shuttlecock/static/js/main.2b622068.js.map",
+    "787.716fcb95.chunk.js.map": "/vr-shuttlecock/static/js/787.716fcb95.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a3ad750.css",
-    "static/js/main.44941f75.js"
+    "static/js/main.2b622068.js"
   ]
 }
